@@ -1,0 +1,24 @@
+name: git-launch
+title: The git-launch stage snap
+version: git
+summary: Make Git adapt to the snap environment
+description: |
+  Refer the following forum topic for more info on using this stage snap:
+
+      The git-launch stage snap - doc - snapcraft.io
+      https://forum.snapcraft.io/t/the-git-launch-stage-snap/11742
+
+# build on least busy architecture
+architectures:
+- build-on: ppc64el
+  run-on: all
+base: core
+grade: stable
+confinement: strict
+
+parts:
+  launchers:
+    source: snap/local/launchers
+    plugin: dump
+    organize:
+      '*': bin/
