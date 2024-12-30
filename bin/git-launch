@@ -9,9 +9,9 @@ set -eu
 # /etc/gitconfig is not accessible
 GIT_CONFIG_NOSYSTEM=true
 
-GIT_EXEC_PATH=$SNAP/usr/lib/git-core
-GIT_TEXTDOMAINDIR=$SNAP/usr/share/locale
-GIT_TEMPLATE_DIR=$SNAP/usr/share/git-core/templates
+GIT_EXEC_PATH="${SNAP}/usr/lib/git-core"
+GIT_TEXTDOMAINDIR="${SNAP}/usr/share/locale"
+GIT_TEMPLATE_DIR="${SNAP}/usr/share/git-core/templates"
 
 export \
     GIT_CONFIG_NOSYSTEM \
